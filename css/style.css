@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+nav{
+    display: flex; /*activar flexbox*/
+    justify-content: space-around;
+    align-items: center;
+    background-color: darkgray;
+    
+}
+
+nav img{
+    width: 100px; /*tamaño del logo*/
+}
+
+nav a{
+    font-size: 19px;
+    font-weight: 500; /*grosor del texto*/
+
+    padding: 16px; /*espacio dnetro del enlace*/
+    border-radius: 15px;
+    transition: 0.7; /*tiempo para volver al estado normal*/
+    text-decoration: none;
+    color: blueviolet;
+    background-color: antiquewhite;
+}
+
+nav a:hover{
+    background-color: beige;
+    transition: 0.7;
+}
+
+.servicios{
+    display: flex;
+    justify-content: space-evenly; /*alineacion horizontal*/
+    flex-wrap: wrap; /*usar varias lineas*/
+    gap: 10px; /*separar targetas*/
+    margin-top: 20px; /*separar las targetas del menu*/
+
+}
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*alinear texto en imagen al centro*/
+    gap: 8px; /*separacion*/
+    margin: 10px;
+}
+
+.servicio img{
+    width: 280px;
+    height: 200px;
+    object-fit: cover; /*para que la imagen llene el espacio sin deformarse*/
+    border-radius: 10px; 
+}
+
+@media (width < 600px){ /*si la pantalla es muy pequeña*/
+    nav{
+        display: flex;
+        flex-direction: column; /*menu vertical si la pantalla es pequeña*/
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+}
